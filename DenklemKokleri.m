@@ -1,0 +1,10 @@
+clc;
+clear all;
+disp('ax^2+bx+c=0 denklemini çözmek için denklem katsayýlarýný gir: ');
+a=input('a deðeri= ');b=input('b deðeri= ');c=input('c deðeri= ');
+dsk=(b*b-4*a*c);
+x1=(-b-sqrt(dsk))/(2*a);
+x2=(-b+sqrt(dsk))/(2*a);
+disp('Denklem kökleri');
+disp(' x1  x2 ');
+disp([x1 x2]);
