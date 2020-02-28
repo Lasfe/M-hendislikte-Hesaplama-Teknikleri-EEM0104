@@ -1,12 +1,13 @@
+%Bisection (YarÄ±lama) Metodu Elektrik Devre Uyg
 clc;clear all; close all;
-xl=input('Alt sınırı giriniz. R_lover');
-xu=input('Üst sınırı giriniz. R_uper');
-tol=input('Alt sınırı giriniz. tol=');
+xl=input('Alt sÄ±nÄ±rÄ± giriniz. R_lover');
+xu=input('Ãœst sÄ±nÄ±rÄ± giriniz. R_uper');
+tol=input('Alt sÄ±nÄ±rÄ± giriniz. tol=');
 f=@(x)(exp(-0.005*x)*cos(sqrt(2000-0.01*x^2)*0.05)-0.01);
 while (f(xl)*f(xu)>0);
-    disp('Girilen aralıkta kök yok, yani değerler gir');
-    xl=input('Alt sınırı giriniz. xl=');
-    xu=input('Üst sınırı giriniz. xu=');
+    disp('Girilen aralÄ±kta kÃ¶k yok, yani deÄŸerler gir');
+    xl=input('Alt sÄ±nÄ±rÄ± giriniz. xl=');
+    xu=input('Ãœst sÄ±nÄ±rÄ± giriniz. xu=');
 end;
 er=10;iter=10;
 while (abs(xu-xl)>tol);
@@ -17,4 +18,4 @@ while (abs(xu-xl)>tol);
         xl=xr;
     end;
 end;
-fprintf('Denklemin kökü xr=%f',xr);
+fprintf('Denklemin kÃ¶kÃ¼ xr=%f',xr);
